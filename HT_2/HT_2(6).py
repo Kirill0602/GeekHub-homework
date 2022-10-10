@@ -1,3 +1,4 @@
+#6. Write a script to check whether a value from user input is contained in a group of values.
 
 input_value = input('Input your first values: \n')
 group_value = input('Input your second values: \n')
