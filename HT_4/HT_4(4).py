@@ -10,7 +10,7 @@ string_input = input('Enter an arbitrary string with characters, numbers, letter
 def sorting_string(string_input):
     renter = int(len(string_input))
     
-    if renter > 30 and renter <= 50:
+    if 30 < renter <= 50:
         nums = ''
         letters = ''
         for c in string_input:
