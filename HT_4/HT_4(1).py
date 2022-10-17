@@ -1,10 +1,11 @@
 number_month = input('Enter the number of the month from 1 to 12: ')
-winter = 12, 1, 2
-spring = 3, 4, 5
-summer = 6, 7, 8
-autumn = 9, 10, 11
 
 def season(number_month):
+    
+    winter = 12, 1, 2
+    spring = 3, 4, 5
+    summer = 6, 7, 8
+    autumn = 9, 10, 11
 
     if not number_month.isdigit():
         return 'Invalid Entry'
