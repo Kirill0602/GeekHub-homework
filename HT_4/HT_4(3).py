@@ -20,13 +20,14 @@ def name(x, y):
 
     if x > y:
         result = x - y
-        return '{} > {} on '.format(x,y) + str(result) 
+        return f'{x} > {y} on {str(result)}'
     elif x < y:
         result = y - x
-        return '{} < {} on '.format(x,y)+str(result)
+        return f'{x} < {y} on {str(result)}'
     elif x == y:
-        return '{} = {} '.format(x,y)    
+        return f'{x} = {y}'   
 
 
 
 print(name(x, y))
+
