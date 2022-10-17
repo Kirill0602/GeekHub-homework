@@ -11,7 +11,8 @@ def func(enter):
 
 def sum_func(a, b):
     result = a + b
-    result1 = print(f'Output of the first function: {result}')
+    result1 = f'Output of the first function: {result}'
+    print(result1)
     return result1
 
 
