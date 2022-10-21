@@ -16,4 +16,4 @@ def bank(a, years, percents=10):
 a = float(input("User makes a contribution in the amount: "))
 years = int(input("For how many years: "))
 
-print(bank(a, years))
+print(bank(a, years, percents=10))
