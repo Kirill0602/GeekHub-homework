@@ -23,6 +23,7 @@ def func(lst):
 
 
 lst = 1, 1, 'foo', [1, 2], True, 'foo', 1, [1, 2]
+lst = list(lst)
 print(func(lst))
 
 
