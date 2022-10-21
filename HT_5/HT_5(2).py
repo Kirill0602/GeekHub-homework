@@ -5,10 +5,10 @@
 Параметр <percents> є необов'язковим і має значення по замовчуванню <10> (10%).
 Функція повинна принтануть суму, яка буде на рахунку, а також її повернути (але округлену до копійок).
 '''
-def bank(a, years):
+def bank(a, years, percents=10):
     
     for i in range (years):
-        percents = 10
+        
         a = a + a/100*percents
 
     return a
