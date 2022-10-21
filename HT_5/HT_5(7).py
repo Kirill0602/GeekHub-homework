@@ -14,7 +14,7 @@ def func(lst):
         if i not in lst1:
             lst1.append(i)
             b = lst.count(i)
-            print(b)
+            print(f'{i} repeats {b} times')
             
     return lst1
             
