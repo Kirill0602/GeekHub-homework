@@ -8,8 +8,8 @@
 def bank(a, years):
     
     for i in range (years):
-        percents = a/100*10
-        a = a + percents
+        percents = 10
+        a = a + a/100*percents
 
     return a
 
