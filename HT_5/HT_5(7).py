@@ -16,6 +16,8 @@ def func(lst):
             b = lst.count(i)
             print(f'{i} repeats {b} times')
             
+    print('repeating elements')
+    
     return lst1
             
 
