@@ -4,11 +4,11 @@
 
 '''
 def fibonacci(number):
-    b = 1
+    b = 0
     c = 1
     while b <= number:
         print(b, end=' ')
-        (b, c) = (c, b + c)
+        b, c = c, b + c
     return b-c
 
 number = int(input('Input number: '))
