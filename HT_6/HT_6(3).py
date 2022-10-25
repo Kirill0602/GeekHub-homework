@@ -11,6 +11,13 @@
       Status: OK
    P.S. Не забудьте використати блок try/except ;)
 '''
+class FirstException(Exception):
+    pass
+class SecondException(Exception):
+    pass
+class ThirdException(Exception):
+    pass
+
 def func():
 
     l = [['username1','password1'], ['username2', 'password2'], ['username3','password3'], ['username4','password'] ]
@@ -20,27 +27,15 @@ def func():
         password = p[1]
         login = p[0]
         if 3 < len(login) > 50:
-            try:
-                raise 'The username must be between 3 and 50 characters long!'
-            except TypeError:
-                print('The username must be between 3 and 50 characters long!')
+            raise FirstException('The username must be between 3 and 50 characters long!')
         if len(password) < 8:
-            try:
-                raise 'Password contains less than 8 characters!'
-            except TypeError:
-                print('Password contains less than 8 characters!')
+            raise SecondException('Password contains less than 8 characters!')
         if len(password) > 16:
-            try:
-                raise 'Password is too long'
-            except TypeError:
-                print('Password is too long')
+            raise ThirdException('Password is too long')
         for i in password:
             if i in '0123456789':
                 print(f'Name: {login}\nPassword: {password}\nStatus: OK')
                 break
         else:
-            try:
-                raise 'Password must contain at least one number'
-            except TypeError:
-                print(f'Name: {login}\nPassword: {password}\nStatus: Password must contain at least one number')
+            print(f'Name: {login}\nPassword: {password}\nStatus: Password must contain at least one number')
 func()
