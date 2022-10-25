@@ -21,10 +21,7 @@ def login_pass(username, password, silent=False):
 
     variable = users.get(username, False) == password
     if not variable and not silent:
-        try:
-            raise LoginException
-        except LoginException:
-            print('LoginException')
+        raise LoginException('LoginException')
     return variable
 
 print(login_pass('username1', 'password1'))
