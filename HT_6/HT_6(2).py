@@ -17,7 +17,7 @@ class FourthException(Exception):
     pass
 def func(login, password):
     if len(login) < 3 or len(login) > 50:
-        raise FirstException('The username must be between 3 and 50 characters long!')
+        raise FirstException ('The username must be between 3 and 50 characters long!')
     if len(password) < 8:
         raise SecondException('Password contains less than 8 characters!')
     if len(password) > 16:
@@ -30,4 +30,4 @@ def func(login, password):
     
     return login, password
     
-print(func('Username', 'aaggggggggg'))
+print(func('Us', 'aaggggggggg1'))
