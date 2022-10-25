@@ -7,33 +7,27 @@
    Якщо якийсь із параметрів не відповідає вимогам - породити виключення із відповідним текстом.
 
 '''
+class FirstException(Exception):
+    pass
+class SecondException(Exception):
+    pass
+class ThirdException(Exception):
+    pass
+class FourthException(Exception):
+    pass
 def func(login, password):
-    if 3 < len(login) > 50:
-        try:
-            raise 'The username must be between 3 and 50 characters long!'
-        except TypeError:
-            print('The username must be between 3 and 50 characters long!')
+    if len(login) < 3 or len(login) > 50:
+        raise FirstException('The username must be between 3 and 50 characters long!')
     if len(password) < 8:
-        try:
-            raise 'Password contains less than 8 characters!'
-        except TypeError:
-            print('Password contains less than 8 characters!')
+        raise SecondException('Password contains less than 8 characters!')
     if len(password) > 16:
-        try:
-            raise 'Password is too long'
-        except TypeError:
-            print('Password is too long')
+        raise ThirdException('Password is too long')
     for i in password:
         if i in '0123456789':
             break
     else:
-        try:
-            raise 'Password must contain at least one number'
-        except TypeError:
-            print('Password must contain at least one number')
-
+        raise FourthException('Password must contain at least one number')
     
     return login, password
     
-print(func('Username', 'aa1aaaaa'))
-
+print(func('Username', 'aaggggggggg'))
