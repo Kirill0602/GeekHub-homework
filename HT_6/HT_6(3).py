@@ -20,30 +20,27 @@ def func():
         password = p[1]
         login = p[0]
         if 3 < len(login) > 50:
-            raise 'The username must be between 3 and 50 characters long!'
+            try:
+                raise 'The username must be between 3 and 50 characters long!'
+            except TypeError:
+                print('The username must be between 3 and 50 characters long!')
         if len(password) < 8:
-            raise 'Password contains less than 8 characters!'
+            try:
+                raise 'Password contains less than 8 characters!'
+            except TypeError:
+                print('Password contains less than 8 characters!')
         if len(password) > 16:
-            raise 'Password is too long'
+            try:
+                raise 'Password is too long'
+            except TypeError:
+                print('Password is too long')
         for i in password:
             if i in '0123456789':
-                print(f'Name: {login}\n Password: {password}\n  Status: OK')
+                print(f'Name: {login}\nPassword: {password}\nStatus: OK')
                 break
         else:
-            print(f'Name: {login}\n Password: {password}\n  Status: Password must contain at least one number')
-    try:
-        raise 'Password must contain at least one number'
-    except TypeError:
-        print('End of func')
-
-
-
-
-     
-
-
+            try:
+                raise 'Password must contain at least one number'
+            except TypeError:
+                print(f'Name: {login}\nPassword: {password}\nStatus: Password must contain at least one number')
 func()
-
-    
-
-
