@@ -13,19 +13,22 @@ class LoginException(Exception):
     pass
 
 def login_pass(username, password, silent=False):
-    user1 = ['username1', 'password1']
-    user2 = ['username2', 'password2']
-    user3 = ['username3', 'password3']
-    user4 = ['username4', 'password5']
-    user5 = ['username5', 'password5']
+    users = {'username1': 'password1',
+             'username2': 'password2',
+             'username3': 'password3',
+             'username4': 'password5',
+             'username5': 'password5'}
 
-    users_list = [user1, user2, user3, user4, user5]
-    users = dict(users_list)
     variable = users.get(username, False) == password
     if not variable and not silent:
-        raise LoginException
+        try:
+            raise LoginException
+        except LoginException:
+            print('LoginException')
     return variable
 
 print(login_pass('username1', 'password1'))
 print(login_pass('username2', 'password3'))
 print(login_pass('username2', 'password3', silent=True))
+
+
