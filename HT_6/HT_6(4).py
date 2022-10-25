@@ -35,21 +35,19 @@ def morse_code(code_entry):
             
     print(f'Translation morse to english:\n{eng}')
 
+    morse = []
     message = input('Enter message: ')
     message = message.upper()
-    morse = []
     for char in message:
         if char in english_morse_dict:
             morse.append(english_morse_dict[char])
-            mor = ' '.join(morse) 
-    try:
-        print(f'Translation english to morse:\n{mor}')
-    except UnboundLocalError:
-        print('Empty value')
-            
+    morse = ''.join(morse)
+    print(f'Translation english to morse:\n{morse}')
+          
   
 
 
 code_entry = input('Enter morse code: \n')
+
 
 morse_code(code_entry)
